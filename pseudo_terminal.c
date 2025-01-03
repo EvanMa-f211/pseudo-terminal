@@ -39,6 +39,8 @@ void handle_command(char* command){
 
     if (strcmp(cmd, "rm") == 0){
         rm(command_list, command_list_num);
+    }else if (strcmp(cmd, "mkdir") == 0){
+        mk(command_list, command_list_num);
     }
 
 
@@ -86,7 +88,7 @@ int main(){
         if (getcwd(cwd, BUF_SIZE) == NULL)
             system_error("getcwd failed");
         
-        if (printf("%s$#$", cwd) < 0)
+        if (printf("%s$#$ ", cwd) < 0)
             system_error("printf failed");
         if (fgets(command, BUF_SIZE, stdin) < 0)
             system_error("scanf failed");

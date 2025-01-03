@@ -19,7 +19,6 @@ void mk(char** command_list, int command_list_num){
     }
 
     char* directory = command_list[0];
-
     // duplicated name
     if (access(directory, F_OK) >= 0){
         printf("%s: duplicated name\n", directory);

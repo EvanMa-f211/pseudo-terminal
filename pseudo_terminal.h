@@ -21,7 +21,7 @@ extern sigset_t default_sigset;
 void system_error(const char* error_str);
 
 void rm(char** command_list, int command_list_num);
-
+void mk(char** command_list, int command_list_num);
 
 
 #endif
